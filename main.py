@@ -32,17 +32,23 @@ def dispatch():
         activity = autoclass("org.kivy.android.PythonActivity").mActivity
         intent = activity.getIntent()
         entrypoint = intent.getStringExtra("entrypoint")
-        orientation = intent.getStringExtra("orientation")
+        
+        if entrypoint is not None:
+            orientation = intent.getStringExtra("orientation")
 
-        if orientation == "portrait":
-            # SCREEN_ORIENTATION_PORTRAIT
-            activity.setRequestedOrientation(0x1)
-        elif orientation == "landscape":
-            # SCREEN_ORIENTATION_LANDSCAPE
-            activity.setRequestedOrientation(0x0)
-        elif orientation == "sensor":
-            # SCREEN_ORIENTATION_SENSOR
-            activity.setRequestedOrientation(0x4)
+            if orientation == "portrait":
+                # SCREEN_ORIENTATION_PORTRAIT
+                activity.setRequestedOrientation(0x1)
+            elif orientation == "landscape":
+                # SCREEN_ORIENTATION_LANDSCAPE
+                activity.setRequestedOrientation(0x0)
+            elif orientation == "sensor":
+                # SCREEN_ORIENTATION_SENSOR
+                activity.setRequestedOrientation(0x4)
+        else:
+            entrypoint = intent.getDataString()
+            if entrypoint is not None:
+                entrypoint = entrypoint.replace('file://', '')
 
         if entrypoint is not None:
             try:

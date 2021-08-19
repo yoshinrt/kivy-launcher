@@ -147,7 +147,7 @@ fullscreen = 0
 p4a.branch = master
 
 # (str) XML file to include as an intent filters in <activity> tag
-#android.manifest.intent_filters =
+android.manifest.intent_filters = intent_filters.xml
 
 # (str) launchMode to set for the main activity
 android.manifest.launch_mode = standard
