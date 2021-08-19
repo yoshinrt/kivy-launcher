@@ -1,3 +1,26 @@
+# Direct Kivy Launcher
+
+This fork allows you to launch a python script directly from the home screen.
+
+The following has been changed from the original Kivy Launcher.
+
+- Direct Kivy Launcher can be launched by implicit intents (*.py).
+  - You can run a python script directly from a filer or home screen shortcut.
+- When the Direct Kivy Launcher is launched, it will run `{SDCARD}/kivy/startup/main.py`.
+  - You can change the behavior of the starting Direct Kivy Launcher without building the apk.
+
+## Instructions
+
+`{SDCARD}` is your device's sdcard path, e.g. `/sdcard`
+
+1. Install the apk
+1. Place all `startup/` files of this repository under `{SDCARD}/kivy/startup/`, or place your initial script as `{SDCARD}/kivy/startup/main.py`.
+1. If you open the python script from a filer etc., it will be executed by Direct Kivy Launcher.
+    - When using `startup/`, you can also start the original launcher by starting Direct Kivy Launcher.
+
+The following description is the original README.md. There is a description that does not apply to this fork.
+
+-----
 # Kivy Launcher
 
 (work in progress, not yet published on Google Play)
