@@ -150,7 +150,7 @@ p4a.branch = master
 android.manifest.intent_filters = intent_filters.xml
 
 # (str) launchMode to set for the main activity
-android.manifest.launch_mode = standard
+#android.manifest.launch_mode = standard
 
 # (list) Android additionnal libraries to copy into libs/armeabi
 #android.add_libs_armeabi = libs/android/*.so
