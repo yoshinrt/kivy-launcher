@@ -19,7 +19,10 @@ def run_launcher(tb=None):
 
 def dispatch():
     import os
-
+    
+    from kivy.resources import resource_add_path
+    resource_add_path('/sdcard/kivy/resource')
+    
     # desktop launch
     print("dispathc!")
     entrypoint = os.environ.get("KIVYLAUNCHER_ENTRYPOINT")
