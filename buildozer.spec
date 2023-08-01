@@ -143,6 +143,9 @@ android.ndk = 25
 # bootstrap)
 #android.gradle_dependencies =
 
+# (str) The format used to package the app for release mode (aab or apk).
+android.release_artifact = apk
+
 # (str) python-for-android branch to use, defaults to stable
 #p4a.branch = master
 p4a.branch = develop
