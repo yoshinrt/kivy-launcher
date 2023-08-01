@@ -85,7 +85,7 @@ fullscreen = 0
 #android.presplash_color = #FFFFFF
 
 # (int) Android API to use
-# android.api = 30
+android.api = 30
 
 # (int) Minimum API required
 #android.minapi = 9
@@ -219,6 +219,7 @@ android.accept_sdk_license = True
 [app:android.permissions]
 READ_EXTERNAL_STORAGE
 WRITE_EXTERNAL_STORAGE
+MANAGE_EXTERNAL_STORAGE
 ACCESS_LOCATION_EXTRA_COMMANDS
 ACCESS_NETWORK_STATE
 ACCESS_NOTIFICATION_POLICY

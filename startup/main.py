@@ -22,7 +22,7 @@ def dispatch():
     
     from kivy.resources import resource_add_path
     resource_add_path('/sdcard/kivy/resource')
-    
+
     # desktop launch
     print("dispathc!")
     entrypoint = os.environ.get("KIVYLAUNCHER_ENTRYPOINT")
