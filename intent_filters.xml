@@ -2,8 +2,6 @@
 	<action android:name="android.intent.action.VIEW" />
 	<category android:name="android.intent.category.DEFAULT" />
 	<category android:name="android.intent.category.BROWSABLE" />
-	<data android:scheme="file" />
-	<data android:mimeType="*/*" />
-	<data android:pathPattern=".*\\.py" />
-	<data android:host="*" />
+	<data android:scheme="file" android:pathPattern=".*\\.py" />
+	<data android:mimeType="text/x-python" android:scheme="content" />
 </intent-filter>
